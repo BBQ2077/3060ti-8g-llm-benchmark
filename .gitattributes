@@ -1,0 +1,12 @@
+# 統一換行：repo 與工作區一律 LF（避免 Windows autocrlf 把 .md/.csv/.py 變成 CRLF）
+* text=auto eol=lf
+
+# 明確標示二進位
+*.png binary
+*.jpg binary
+*.ico binary
+*.gguf binary
+
+# GitHub Linguist：不把報告 HTML/CSV 當成主要語言統計
+report_dashboard.html linguist-vendored
+*.csv linguist-documentation

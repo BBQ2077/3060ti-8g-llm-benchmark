@@ -1,0 +1,26 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- OS / editor junk ----
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+
+# ---- QA / 臨時輸出（本專案不會帶入版控）----
+_qa_*
+*.tmp
+*.bak
+
+# ---- 模型權重與執行環境（若有人就地測試，別把幾十 GB 推上來）----
+*.gguf
+*.ggml
+*.safetensors
+*.bin
+runtime/
+models/
+cache/

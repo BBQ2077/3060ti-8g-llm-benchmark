@@ -1,0 +1,64 @@
+來源表,模型名稱 / 檔案名稱,執行結果,品質,推理速度 (TKS),測試評語摘要,連結核對狀態,連結
+主表,Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_P,✅ 跑得完,B（普通）,77 TKS,詞藻華麗但缺乏實質內容；能寫滿字數不崩,未核對,https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive
+主表,Bonsai-27b-1bit-CRACK-Q1_0,❌ 死循環/崩潰,C（明確負面）,-,中英混雜、頻繁無限循環,未核對,
+主表,Bonsai-27B-Q1_0 (官方版),❌ 死循環/崩潰,C（明確負面）,-,中英混雜且無限循環,未核對,https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf
+主表,Bonsai-27B-dspark-dflash-Q4_0,✅ 跑得完,未評,慢速,0.6G DF 配置，速度顯著下降,未核對,https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf
+主表,Huihui-MiniCPM5-2B-abliterated-GGUF,✅ 跑得完,C（明確負面）,120 TKS,速度飛快但創意極低，工具型,未核對,https://huggingface.co/huihui-ai/Huihui-MiniCPM5-2B-abliterated
+主表,Huihui-Spark-X2.5-4B-abliterated-Q4_K_M,✅ 跑得完,B（普通）,100 TKS,同級小鋼炮，表現尚可,未核對,https://huggingface.co/huihui-ai/Huihui-Spark-X2.5-4B-abliterated
+主表,K2-Horizon-7B-Q4_K_M.gguf,⚠️ 無法執行,未評,-,與 llama-b11002 CUDA 不相容,未核對,https://huggingface.co/IFM/K2-Horizon-7B
+主表,Ornith-1.5-9B-GGUF,✅ 跑得完,C（明確負面）,60 TKS,普通作文與拙劣之間,未核對,https://huggingface.co/mradermacher/Ornith-1.5-9B-uncensored-GGUF
+主表,Qwen3.8-4B-Distill-GGUF,✅ 跑得完,B（普通）,100 TKS,優於 Gemma-4-E4B，初階作者筆觸,未核對,https://huggingface.co/empero-ai/Qwen3.8-4B-Distill-GGUF
+主表,maple-preview-TQ1_0-head-Q4_K,✅ 跑得完,B（普通）,38 TKS,文筆優秀、結構欠佳；3000 字後邏輯渙散但無單句死循環,未核對,https://huggingface.co/deepgrove/maple-preview
+主表,gemma4-v2-Q3_K_M-yuxinlu1,❌ 死循環/崩潰,C（明確負面）,-,量化過度崩潰,未核對,https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF
+主表,Huihui-Qwen3-8B-abliterated-v2-Q4_K_M-GGUF,❌ 死循環/崩潰,C（明確負面）,70 TKS,虎頭蛇尾，拉長即死循環,名稱不符（連到 Qwen3.8-27B）,https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF
+主表,Qwen3.8-27B RVN Heretic Abliterated-IQ1_S,❌ 死循環/崩潰,C（明確負面）,30 TKS,觸發無限迴圈後自動中斷,連到基礎模型，非該量化再發布版,https://huggingface.co/Qwen/Qwen3.8-27B
+主表,Qwen3.8-9B-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,67 TKS,風格酷炫但缺邏輯內核；能寫完不卡死,未核對,https://huggingface.co/empero-ai/Qwen3.8-9B-Distill-GGUF
+主表,Ling-3.0-tiny-Q4_K_M.gguf,❌ 死循環/崩潰,C（明確負面）,158 TKS,陷入無限迴圈,未核對,https://huggingface.co/inclusionAI/Ling-3.0-tiny
+主表,LFM2.5-2.6B-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,164 TKS,人物隨機更換，穩定性差,未核對,https://huggingface.co/LiquidAI/LFM2.5-2.6B
+主表,Phi-4-mini-instruct-Q4_K_M.gguf,❌ 死循環/崩潰,C（明確負面）,116 TKS,容易無限循環、離題,名稱不符（連到 Phi-3-mini）,https://huggingface.co/microsoft/Phi-3-mini-4k-instruct
+主表,Qwen3.6-14B-A3B-FableVibes-Q2_K.gguf,❌ 死循環/崩潰,C（明確負面）,85 TKS,無限死循環並跳英文,未核對,https://huggingface.co/tvall43/Qwen3.6-14B-A3B-FableVibes-GGUF
+主表,Qwen3-8B-Q4_K_M.gguf (官方版),✅ 跑得完,C（明確負面）,70 TKS,僅寫 600 字；3000 字自稱超出能力,未核對,https://huggingface.co/Qwen/Qwen3-8B
+主表,OxCoder-9B.Q4_K_M.gguf,✅ 跑得完,C（明確負面）,67 TKS,1000 字可完結但有邏輯硬傷；3000 字死循環,未核對,https://huggingface.co/OrionLLM/OxCoder-9B
+主表,Nanbeige4.2-3B-Q4_K_M.gguf,❌ 死循環/崩潰,C（明確負面）,60 TKS,開頭可接受，拉長即死循環,未核對,https://huggingface.co/Nanbeige/Nanbeige4.2-3B
+主表,Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced,✅ 跑得完,C（明確負面）,12 TKS,氛圍佳但推理薄弱、12 TKS,連到 google 原版，非 HauhauCS QAT 版,https://huggingface.co/google/gemma-4-12B-it
+主表,gemma-4-12b-it-UD-Q2_K_XL.gguf,❌ 死循環/崩潰,C（明確負面）,43 TKS,無限迴圈,未核對,https://huggingface.co/google/gemma-4-12B-it
+主表,glm-4-9b-chat.Q4_K_S.gguf,✅ 跑得完,C（明確負面）,50 TKS,完全離題（政治新聞）,未核對,https://huggingface.co/THUDM/glm-4-9b-chat
+主表,Mistral-7B-Instruct-v0.3.Q4_K_M.gguf,✅ 跑得完,C（明確負面）,16 TKS,缺乏邏輯推演；16 TKS,未核對,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
+主表,Qwen3.5-9B-The-Defiant-Fable-Uncnr-IQ3_M,✅ 跑得完,C（明確負面）,24 TKS,偏離推理題材,僅組織首頁,https://huggingface.co/Qwen
+主表,maple-tq2_0.gguf,⚠️ 無法執行,未評,-,需特殊客製 llama.cpp 分支,未核對,https://huggingface.co/deepgrove/maple-preview
+主表,Qwythos-9B-Claude-Mythos-5-1M-MTP-Q4_K_M,❌ 死循環/崩潰,C（明確負面）,10 TKS,無限迴圈卡死,未核對,https://huggingface.co/mradermacher
+主表,Qwen3.8-27B-UD-IQ1_S.gguf,❌ 死循環/崩潰,C（明確負面）,9 TKS,僅 50 字即異常終止,連到基礎模型，非該量化再發布版,https://huggingface.co/Qwen/Qwen3.8-27B
+主表,DeepSeek-R1-0528-Qwen3-8B-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,35 TKS,前半優秀，後段嚴重發散無結局,未核對,https://huggingface.co/deepseek-ai/DeepSeek-R1
+主表,gemma-4-12B-it-qat-UD-Q4_K_XL.gguf,✅ 跑得完,B（普通）,13 TKS,創意度高，常規邏輯瑕疵；13 TKS 偏慢,未核對,https://huggingface.co/google/gemma-4-12B-it
+主表,gemma-4-E4B-it-qat-UD-Q4_K_XL.gguf,✅ 跑得完,B（普通）,65 TKS,詞藻結構優秀，核心推理矛盾,連到 gemma-4-12B，非 E4B,https://huggingface.co/google/gemma-4-12B-it
+主表,Hermes-3-Llama-3.1-8B.Q4_K_M.gguf,✅ 跑得完,B（普通）,50 TKS,平庸但穩定無短板，適合當代理基準,未核對,https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B
+主表,DeepSeek-V4-Pro-Qwen3.5-9B-MTP-Q4_K_M.gguf,❌ 死循環/崩潰,C（明確負面）,30 TKS,中後段陷入死循環,僅組織首頁,https://huggingface.co/deepseek-ai
+主表,DeepSeek-Coder-V2-Lite-Instruct-IQ2_M.gguf,✅ 跑得完,C（明確負面）,70 TKS,結構混亂、邏輯偏移,未核對,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+主表,DeepSeek-R1-Distill-Qwen-14B-IQ2_M.gguf,❌ 死循環/崩潰,C（明確負面）,25 TKS,拉長後推理驟降並死循環,未核對,https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+主表,DeepSeek-R1-Distill-Qwen-32B-IQ2_M.gguf,✅ 跑得完,C（明確負面）,2 TKS,記憶體交換，2 TKS 不實用,未核對,https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+主表,internlm3-8b-instruct-q4_k_m.gguf,✅ 跑得完,C（明確負面）,67 TKS,偏離推理主題,名稱不符（連到 internlm2_5-7b-chat）,https://huggingface.co/internlm
+主表,Yi-1.5-9B-Chat-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,67 TKS,直白乏味、無伏筆、前後矛盾,未核對,https://huggingface.co/01-ai/Yi-1.5-9B-Chat
+主表,aya-expanse-8b-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,70 TKS,國中生作文、排版跑版,未核對,https://huggingface.co/CohereLabs/aya-expanse-8b
+主表,Qwen2.5-7B-Instruct-Q4_K_M.gguf,✅ 跑得完,C（明確負面）,-,內容完全混亂失序,未核對,https://huggingface.co/Qwen/Qwen2.5-7B-Instruct
+主表,Qwen3-14B-Claude-4.5-Opus-Distill.q3_k_s.gguf,✅ 跑得完,C（明確負面）,25 TKS,能完整產出但邏輯矛盾點多,僅組織首頁,https://huggingface.co/Qwen
+主表,TieFighter-Holodeck-20B-IQ2_M-imat.gguf,✅ 跑得完,C（明確負面）,14 TKS,中文支援不良、輸出亂碼,未核對,https://huggingface.co/DavidAU/TieFighter-Holodeck-Holomax-Mythomax-F1-V1-COMPOS-20B-gguf
+主表,Moonlight-16B-A3B-Instruct-IQ2_XS.gguf,✅ 跑得完,C（明確負面）,-,生成亂碼,未核對,https://huggingface.co/moonshotai/Moonlight-16B-A3B-Instruct
+主表,amd.Instella-MoE-16B-A3B-Think-Q2_K.gguf,⚠️ 無法執行,未評,-,llama.cpp PR #26467 未合併,未核對,https://huggingface.co/amd/Instella-MoE-16B-A3B-Think
+主表,bohf-12b-moe-3a-q4_k_m.gguf,❌ 死循環/崩潰,C（明確負面）,-,未輸出小說內容,未核對,https://huggingface.co/theprint/Bohf-12B-MoE-3A
+主表,gemma-4-E4B-it-OBLITERATED.i1-Q4_K_S,✅ 跑得完,C（明確負面）,84 TKS,用詞奔放但後半邏輯崩潰,連到 gemma-4-12B，非 E4B,https://huggingface.co/google/gemma-4-12B-it
+主表,gemma-4-26B-A4B-it-UD-Q2_K_XL,✅ 跑得完,A（明確正面）,10 TKS (思考: 5 TKS),完成度高、GPT-SOL 評為最像樣版本,僅組織首頁,https://huggingface.co/google
+MoE/NCMoE 表,gemma-4-26B-A4B-it-UD-Q2_K_XL + Q8MTP (n_max=1),✅ 跑得完,A（明確正面）,35 TKS,32K 上下文 + Q4KV，速度表現良好（35 TKS）,僅組織首頁,https://huggingface.co/google
+MoE/NCMoE 表,Qwen3.6-35B-A3B-UD-Q3_K_XL,✅ 跑得完,B（普通）,25 TKS,無死循環、初階作者水準，細微邏輯瑕疵,僅組織首頁,https://huggingface.co/Qwen
+MoE/NCMoE 表,gpt-oss-20b-Q8_0,✅ 跑得完,B（普通）,22 TKS,無死循環，行文平庸，評分低於 Qwen,僅組織首頁,https://huggingface.co/openai
+MoE/NCMoE 表,ERNIE-4.5-21B-A3B-Thinking-UD-Q4_K_XL,⚠️ 無法執行,C（明確負面）,-,解析格式異常，輸出被導向 log,僅組織首頁,https://huggingface.co/baidu
+MoE/NCMoE 表,Nemotron-3-Nano 30B-A3B Q4_0,✅ 跑得完,C（明確負面）,12 TKS,核心推理邏輯矛盾,未核對,https://huggingface.co/nvidia
+MoE/NCMoE 表,GLM-4.7-Flash-UD-Q3_K_XL,✅ 跑得完,C（明確負面）,30 TKS,偽推理結構，缺真正推理內核,連到 glm-4-9b-chat,https://huggingface.co/THUDM
+MoE/NCMoE 表,Ornith-1.5-35B-A3B-IQ4_XS,✅ 跑得完,C（明確負面）,37 TKS,文風中庸、邏輯瑕疵，偏 Coding/Agent,僅組織首頁,https://huggingface.co/ornith-ai
+MoE/NCMoE 表,Ternary-Bonsai-2-27B-PTQ1_0,✅ 跑得完,B（普通）,28 TKS,"8G 顯存極限；需專用 fork 與參數；長文 2,000～3,000 字崩潰",未核對,https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf
+MoE/NCMoE 表,Qwen3.8-Flash-Next-UD-Q2_K_XL-reap320,❌ 死循環/崩潰,C（明確負面）,10 TKS,中文無限迴圈（英文正常）,未核對,https://huggingface.co/Litwein/Qwen3.8-Flash-Next-REAP320-oQ3e-DWQ-MTP-Vision-MTPLX
+MoE/NCMoE 表,K2-Horizon-MoVA-36B-A4B-Q3_K_M,❌ 死循環/崩潰,C（明確負面）,13 TKS,死循環並夾雜英文,未核對,https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B
+MoE/NCMoE 表,Qwen3.8-Flash-Next-125B-UltraLite-37GiB,⚠️ 無法執行,C（明確負面）,6 TKS,需額外編譯，中英問題均無法回應,連到 REAP-320 系列，非 UltraLite 37GiB,https://huggingface.co/AnonimousA/Qwen3.8-Flash-Next-REAP-320-GGUF
+MoE/NCMoE 表,nex-agi_Nex-N2.5-mini-IQ2_M,✅ 跑得完,C（明確負面）,39 TKS,類似 Qwen3.6-35B，核心邏輯矛盾,未核對,https://huggingface.co/nex-agi/Nex-N2.5-mini
+MoE/NCMoE 表,Huihui4-48B-A4B-abliterated.i1-IQ3_M,✅ 跑得完,C（明確負面）,17 TKS,文筆生動但情節邏輯荒謬,未核對,https://huggingface.co/huihui-ai
+MoE/NCMoE 表,JoyAI-LLM-Flash-IQ3_XS,✅ 跑得完,C（明確負面）,21 TKS,些許相容問題，核心邏輯大矛盾,未核對,https://huggingface.co/jdopensource/JoyAI-LLM-Flash
+MoE/NCMoE 表,Muse-Glimmer-30B-UD-Q4_K_XL,✅ 跑得完,C（明確負面）,1.5 TKS,運算過久，1.5 TKS 不實用,未核對,https://huggingface.co/meta-models/Muse-Glimmer-30B
