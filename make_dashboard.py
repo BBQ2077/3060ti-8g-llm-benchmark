@@ -12,6 +12,7 @@ import json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "report_assets")
+REPO = "https://github.com/BBQ2077/3060ti-8g-llm-benchmark"
 
 CHARTS = [
     ("01_memory_bandwidth.png", "圖 1　記憶體階層與帶寬落差",
@@ -128,6 +129,8 @@ def main():
   .chip {{ background:var(--card); border:1px solid var(--line); border-radius:999px;
            padding:5px 12px; font-size:13px; color:var(--dim); }}
   .chip b {{ color:var(--fg); }}
+  a.chip {{ color:var(--fg); text-decoration:none; }}
+  a.chip:hover {{ border-color:var(--fg); }}
   .kpis {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(168px,1fr)); gap:12px; margin:16px 0 8px; }}
   .kpi {{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }}
   .kpi .n {{ font-size:26px; font-weight:700; }}
@@ -165,6 +168,13 @@ def main():
 <div class="wrap">
   <h1>3060 Ti 8G ＋ 32G DDR4-2666　本機 LLM 實測報告（圖表版）</h1>
   <div class="sub">測試條件：Context 4096、Q4KV、單次任務「1,000 字推理小說」｜樣本 63 筆｜評分 GPT-SOL（6.0 及格）</div>
+  <div class="toolbar" style="margin:14px 0 2px">
+    <span class="chip">🌐 語言／Language：<b>中文（本頁）</b></span>
+    <a class="chip" href="{REPO}/blob/main/3060ti_8g_model_report.md#english-summary" target="_blank" rel="noopener">English Summary ↗</a>
+    <a class="chip" href="{REPO}" target="_blank" rel="noopener">GitHub 專案 ↗</a>
+    <a class="chip" href="{REPO}/blob/main/3060ti_8g_model_report.md" target="_blank" rel="noopener">完整報告 ↗</a>
+    <a class="chip" href="#models">63 筆清單 ↓</a>
+  </div>
   <div class="chips">
     <span class="chip">GPU <b>RTX 3060 Ti 8 GB</b>｜<b>448 GB/s</b></span>
     <span class="chip">RAM <b>32 GB DDR4-2666</b>｜約 <b>40 GB/s</b></span>
@@ -198,7 +208,7 @@ def main():
   <tbody>{recipe_rows}</tbody></table>
   <p class="mini">專案內 <code>ggufrun_recipe.md</code> 有更完整的掃描流程與急救表。</p>
 
-  <h2>63 筆模型瀏覽（搜尋／篩選）</h2>
+  <h2 id="models">63 筆模型瀏覽（搜尋／篩選）</h2>
   <div class="toolbar">
     <input type="search" id="q" placeholder="搜尋模型名稱、評語…">
     <button class="f on" data-f="all">全部</button>

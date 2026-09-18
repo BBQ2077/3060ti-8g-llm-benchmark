@@ -1,5 +1,10 @@
 # 3060 Ti 8G ＋ 32GB DDR4-2666 本機 LLM 實測報告
 
+<a id="top"></a>
+
+> 🌐 **語言／Language：中文（本頁）** ｜ [**English ↓**](#english)
+> 📄 **快速連結**：**[主報告](3060ti_8g_model_report.md)** ｜ [English Summary（英文摘要）](3060ti_8g_model_report.md#english-summary) ｜ [一頁式儀表板](report_dashboard.html) ｜ [六張圖](#六張圖) ｜ [63 筆清單](models.csv) ｜ [操作速查](ggufrun_recipe.md)
+
 > **一句話**：要在 8 GB 顯存上跑得動、跑得快，關鍵不是模型多大，而是**每產生一個 token 要讀多少權重、從哪裡讀**。
 > 這份專案用 **63 顆模型**的實測數據，把這台機器的「可行區間」畫出來，並給出可以直接照抄的參數與流程。
 >
@@ -101,7 +106,11 @@
 
 ---
 
+<a id="english"></a>
+
 ## English
+
+> 🌐 [**中文 ↑**](#top) ｜ **English（本節）**
 
 ### What this is
 
@@ -170,3 +179,7 @@ The headline finding: on this class of hardware, **memory bandwidth — not comp
 - Model names link to their respective Hugging Face pages; licensing follows each upstream publisher.
 
 _Measured 2026-09-18 ｜ RTX 3060 Ti 8 GB + 32 GB DDR4-2666 ｜ Tooling: [GGUFRun](https://github.com/BBQ2077/GGUFRun)_
+
+---
+
+[↑ 回頂端 / Back to top](#top)

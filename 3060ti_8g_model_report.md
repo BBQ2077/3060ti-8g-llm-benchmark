@@ -1,5 +1,10 @@
 # 3060 Ti 8G ＋ 32G DDR4-2666 本機 LLM 實測報告（v2）
 
+<a id="top"></a>
+
+> 🌐 **語言／Language：中文（本文）** ｜ [**English Summary ↓**](#english-summary)
+> 🧭 **快連**：[0 TL;DR](#0-三分鐘版tldr) ｜ [1 硬體天花板](#1-硬體基線天花板在哪為什麼) ｜ [**1.4 NCMoE 與三個極限**](#ncmoe) ｜ [2 核心結論](#2-核心結論原報告結論重整補充) ｜ [3 實測總表 63 筆](#3-實測總表63-筆原始數據) ｜ [4 評分榜](#4-gpt-sol-基準評分榜沿用原報告) ｜ [5 選型梯隊](#5-參數梯隊選型指南8gb-vram-32gb-ram) ｜ [6 死循環對策](#6-死循環無限迴圈診斷與六種對策) ｜ [7 起始參數](#7-本機建議起始參數4096-ctx-8-gb-vram) ｜ [8 決策樹](#8-決策樹依任務挑模型) ｜ [9 GGUFRun](#9-用-ggufrun-跑這份清單) ｜ [附錄 A](#附錄-a相容性與已知問題) ｜ [B 連結核對](#附錄-b連結核對狀態) ｜ [C 修正紀錄](#附錄-c本次優化修正紀錄) ｜ [D English](#english-summary)
+
 > **硬體**：NVIDIA RTX 3060 Ti（8 GB GDDR6，448 GB/s）＋ 32 GB DDR4-**2666** ＋ Windows 11
 > **測試條件**：Context **4096**、**Q4KV**、單次任務「撰寫 1,000 字推理小說」，滿載 63 顆模型／量化檔
 > **評分基準**：GPT-SOL 標準（6.0 / 10 為及格線）
@@ -93,6 +98,8 @@ t/s 上限 ≈ 可用帶寬 ÷ 每 token 需讀取的權重位元組
 | — | **實測可行上限：MoE（A3B/A4B）35B Q3 ＝ 25 TKS、48B IQ3_M ＝ 17 TKS、20B Q8 ＝ 22 TKS**；純 dense ≤ 12B Q4（13～84 TKS） |
 
 ### 1.4 破局手段只有一個：MoE ＋ NCMoE 分層（與它的三個極限）
+
+<a id="ncmoe"></a>
 
 `-ncmoe N`（llama.cpp 的 `--n-cpu-moe`）把**前 N 層的專家權重留在 CPU／RAM**，其餘留在顯存；
 `-ncffn N` 對 dense FFN 做同樣的事。MoE 每個 token 只會路由到少數專家，
@@ -591,7 +598,11 @@ python tools\_ttype.py Model.gguf     :: 這個「Q4_K_M」裡到底裝了什麼
 
 ---
 
+<a id="english-summary"></a>
+
 ## Appendix D — English Summary
+
+> 🌐 [**中文 ↑**](#top) ｜ **English（本節）**
 
 *The full report is written in Traditional Chinese; this appendix summarises its method, data and
 conclusions in English.*
@@ -637,4 +648,8 @@ revision and background load all move these numbers. Parameter counts and quanti
 inferred from file names; derived bandwidth ceilings are labelled as estimates in the Chinese body.
 All 63 raw verdicts and tok/s values are preserved verbatim in
 `source_llm_evaluation_4096_q4kv_report.md` and `models.csv`.
+
+---
+
+[↑ 回頂端 / Back to top](#top)
 
